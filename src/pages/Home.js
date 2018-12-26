@@ -2,7 +2,8 @@ import React,{useState} from "react";
 import {
     Card,Row,Col,Carousel, Button
 } from 'antd';
-import SL from './../components/SideList'
+import SL from './../components/SideList';
+import HI from './../components/HomeItem'
 const data1 = [
     {
         title:"Item 1",
@@ -46,22 +47,6 @@ const NovelItem = {
     display:'inline-block'
 }
 
-const HomeItem = ({data,deleteItem})=>(
-        <Col span={8}>
-            <Card
-                style={{margin:5}}
-                title={data.title}
-                extra={
-                    <Button onClick={deleteItem}>Delete</Button>
-                }
-            >
-                <p>
-                    {data.desc}                       
-                </p>
-            </Card>
-        </Col>
-)
-
 const Home = () => {
     const [state,setState] = useState({data1,data2});
     const deleteItem = (index) =>{
@@ -85,7 +70,7 @@ const Home = () => {
                 >
                 {
                     state.data1.map((i,index)=>(
-                        <HomeItem key={index} data={i} deleteItem={()=>{deleteItem(index)}}/>
+                        <HI key={index} data={i} deleteItem={()=>{deleteItem(index)}}/>
                     ))
                 }   
                 </Card>
