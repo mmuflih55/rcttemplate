@@ -1,0 +1,118 @@
+.App {
+  /* text-align: center; */
+}
+
+
+.Header-Menu {
+  float: right;  
+  display: flex;
+  flex-direction: row;
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.Header-Menu li {
+  padding: 2vh;
+}
+
+
+.Header-Menu li a{
+  list-style-type: none;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+}
+
+.App-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.App-logo {
+  vertical-align: middle; 
+  animation: App-logo-spin infinite 20s linear;
+  height: 45px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+}
+
+.App-Body {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Override antd css */
+
+.ant-layout-content {
+  min-height: calc(100vh - 55px - 65px) !important;
+  /* margin: auto; */
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #ccc;
+  /* overflow: hidden; */
+}
+
+.ant-layout {
+  /* background-color: #fff !important; */
+}
+
+.NovelItem {
+  width: '33.33%' !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .Web {
+    display: none;
+  }
+
+  .Search{
+    width: 100%
+  }
+
+  .Mob {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .Web {
+    display: block;
+  }
+  .Mob {
+    display: none;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
